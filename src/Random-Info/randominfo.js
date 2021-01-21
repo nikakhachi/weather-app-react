@@ -41,9 +41,9 @@ class RandomInfo extends Component{
     };
 
     async componentDidMount() {
-        const response1 = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${randomCities[0]}&appid=HAHA...NO&units=metric`);
-        const response2 = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${randomCities[1]}&appid=HAHA...NO&units=metric`);
-        const response3 = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${randomCities[2]}&appid=HAHA...NO&units=metric`);
+        const response1 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCities[0]}&appid=HAHA...NO&units=metric`);
+        const response2 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCities[1]}&appid=HAHA...NO&units=metric`);
+        const response3 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCities[2]}&appid=HAHA...NO&units=metric`);
         data1 = await response1.json();
         data2 = await response2.json();
         data3= await response3.json();
