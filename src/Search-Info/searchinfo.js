@@ -22,7 +22,7 @@ function SearchInfo(){
 
     useEffect(() => {
         setWeatherData(undefined);
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=HAHA...NO&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=HAHA...NO&units=metric`)
             .then(response => response.json())
             .then(data => {
                 switch(data.weather[0].icon){
