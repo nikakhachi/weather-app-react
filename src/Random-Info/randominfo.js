@@ -23,7 +23,7 @@ for(let i = 0; i < 3; i++){
     let random = Math.floor(Math.random() * capitals.length);
     randomCities.push(capitals[random]);
     // If two of the three cities in arrays are same, this while loop corrects it.
-    while(capitals.indexOf(randomCities[i-1]) === random){
+     while(capitals.indexOf(randomCities[i-1]) === random || capitals.indexOf(randomCities[i-2]) === random){
         random = Math.floor(Math.random() * capitals.length);
         randomCities.pop();
         randomCities.push(capitals[random]);
