@@ -1,4 +1,5 @@
 # Weather App
+### Get current weather in any city
 
 ### Link : https://weather-app-bynick.herokuapp.com/
 
