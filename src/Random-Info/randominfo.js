@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 
-import clearDay from './01d.png';
-import clearNight from './01n.png';
-import fewCloudsDay from './02d.png';
-import fewCloudsNight from './02n.png';
-import clouds from './030450dn.png';
-import showerRain from './09dn.png';
-import rainDay from './10d.png';
-import rainNight from './10n.png';
-import thunderstorm from './11dn.png';
-import snow from './13dn.png';
+import clearDay from '../assets/01d.png';
+import clearNight from '../assets/01n.png';
+import fewCloudsDay from '../assets/02d.png';
+import fewCloudsNight from '../assets/02n.png';
+import clouds from '../assets/030450dn.png';
+import showerRain from '../assets/09dn.png';
+import rainDay from '../assets/10d.png';
+import rainNight from '../assets/10n.png';
+import thunderstorm from '../assets/11dn.png';
+import snow from '../assets/13dn.png';
 
 import './randominfo.css';
 
@@ -23,7 +23,7 @@ for(let i = 0; i < 3; i++){
     let random = Math.floor(Math.random() * capitals.length);
     randomCities.push(capitals[random]);
     // If two of the three cities in arrays are same, this while loop corrects it.
-     while(capitals.indexOf(randomCities[i-1]) === random || capitals.indexOf(randomCities[i-2]) === random){
+    while(capitals.indexOf(randomCities[i-1]) === random || capitals.indexOf(randomCities[i-2]) === random){
         random = Math.floor(Math.random() * capitals.length);
         randomCities.pop();
         randomCities.push(capitals[random]);
@@ -41,12 +41,12 @@ class RandomInfo extends Component{
     };
 
     async componentDidMount() {
-        const response1 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCities[0]}&appid=HAHA...NO&units=metric`);
-        const response2 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCities[1]}&appid=HAHA...NO&units=metric`);
-        const response3 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCities[2]}&appid=HAHA...NO&units=metric`);
+        const response1 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCities[0]}&appid=ec6597680d29dc6b93d0586e8e08bc0f&units=metric`);
+        const response2 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCities[1]}&appid=ec6597680d29dc6b93d0586e8e08bc0f&units=metric`);
+        const response3 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomCities[2]}&appid=ec6597680d29dc6b93d0586e8e08bc0f&units=metric`);
         data1 = await response1.json();
         data2 = await response2.json();
-        data3= await response3.json();
+        data3 = await response3.json();
 
         // THIS LOONG 3 SWITCH STATEMENTS APPLIES IMAGE TO CORRESPONDING WEATHER
         switch(data1.weather[0].icon){

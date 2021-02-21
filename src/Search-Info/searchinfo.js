@@ -1,13 +1,13 @@
-import clearDay from '../Random-Info/01d.png';
-import clearNight from '../Random-Info/01n.png';
-import fewCloudsDay from '../Random-Info/02d.png';
-import fewCloudsNight from '../Random-Info/02n.png';
-import clouds from '../Random-Info/030450dn.png';
-import showerRain from '../Random-Info/09dn.png';
-import rainDay from '../Random-Info/10d.png';
-import rainNight from '../Random-Info/10n.png';
-import thunderstorm from '../Random-Info/11dn.png';
-import snow from '../Random-Info/13dn.png';
+import clearDay from '../assets/01d.png';
+import clearNight from '../assets/01n.png';
+import fewCloudsDay from '../assets/02d.png';
+import fewCloudsNight from '../assets/02n.png';
+import clouds from '../assets/030450dn.png';
+import showerRain from '../assets/09dn.png';
+import rainDay from '../assets/10d.png';
+import rainNight from '../assets/10n.png';
+import thunderstorm from '../assets/11dn.png';
+import snow from '../assets/13dn.png';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import './searchinfo.css';
@@ -22,7 +22,7 @@ function SearchInfo(){
 
     useEffect(() => {
         setWeatherData(undefined);
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=HAHA...NO&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ec6597680d29dc6b93d0586e8e08bc0f&units=metric`)
             .then(response => response.json())
             .then(data => {
                 switch(data.weather[0].icon){
