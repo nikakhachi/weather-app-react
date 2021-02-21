@@ -1,16 +1,5 @@
 import React, {Component} from 'react';
-
-import clearDay from '../../assets/01d.png';
-import clearNight from '../../assets/01n.png';
-import fewCloudsDay from '../../assets/02d.png';
-import fewCloudsNight from '../../assets/02n.png';
-import clouds from '../../assets/030450dn.png';
-import showerRain from '../../assets/09dn.png';
-import rainDay from '../../assets/10d.png';
-import rainNight from '../../assets/10n.png';
-import thunderstorm from '../../assets/11dn.png';
-import snow from '../../assets/13dn.png';
-
+import assignWeatherToImage from '../../services/services';
 import './randominfo.css';
 
 import capitals from './country-capitals';
@@ -48,136 +37,10 @@ class RandomInfo extends Component{
         data2 = await response2.json();
         data3 = await response3.json();
 
-        // THIS LOONG 3 SWITCH STATEMENTS APPLIES IMAGE TO CORRESPONDING WEATHER
-        switch(data1.weather[0].icon){
-                case '01d':
-                    data1.weather[0].icon = clearDay;
-                    break;
-                case '01n':
-                    data1.weather[0].icon = clearNight;
-                    break;
-                case '02d':
-                   data1.weather[0].icon = fewCloudsDay;
-                   break;
-                case '02n':
-                    data1.weather[0].icon = fewCloudsNight;
-                    break;
-                case '03d':
-                case '03n':
-                case '04d':
-                case '04n':
-                case '50d':
-                case '50n':
-                    data1.weather[0].icon = clouds;
-                    break;
-                case '09d':
-                case '09n':
-                    data1.weather[0].icon = showerRain;
-                    break;
-                case '10d':
-                    data1.weather[0].icon = rainDay;
-                    break;
-                case '10n':
-                    data1.weather[0].icon = rainNight;
-                    break;
-                case '11d':
-                case '11n':
-                    data1.weather[0].icon = thunderstorm;
-                    break;
-                case '13d':
-                case '13n':
-                    data1.weather[0].icon = snow;
-                    break;
-                default :
-                    data1.weather[0].icon = clouds;
-                    break;
-            }
-            switch(data2.weather[0].icon){
-                case '01d':
-                    data2.weather[0].icon = clearDay;
-                    break;
-                case '01n':
-                    data2.weather[0].icon = clearNight;
-                    break;
-                case '02d':
-                   data2.weather[0].icon = fewCloudsDay;
-                   break;
-                case '02n':
-                    data2.weather[0].icon = fewCloudsNight;
-                    break;
-                case '03d':
-                case '03n':
-                case '04d':
-                case '04n':
-                case '50d':
-                case '50n':
-                    data2.weather[0].icon = clouds;
-                    break;
-                case '09d':
-                case '09n':
-                    data2.weather[0].icon = showerRain;
-                    break;
-                case '10d':
-                    data2.weather[0].icon = rainDay;
-                    break;
-                case '10n':
-                    data2.weather[0].icon = rainNight;
-                    break;
-                case '11d':
-                case '11n':
-                    data2.weather[0].icon = thunderstorm;
-                    break;
-                case '13d':
-                case '13n':
-                    data2.weather[0].icon = snow;
-                    break;
-                default :
-                    data2.weather[0].icon = clouds;
-                    break;
-            }
-            switch(data3.weather[0].icon){
-                case '01d':
-                    data3.weather[0].icon = clearDay;
-                    break;
-                case '01n':
-                    data3.weather[0].icon = clearNight;
-                    break;
-                case '02d':
-                   data3.weather[0].icon = fewCloudsDay;
-                   break;
-                case '02n':
-                    data3.weather[0].icon = fewCloudsNight;
-                    break;
-                case '03d':
-                case '03n':
-                case '04d':
-                case '04n':
-                case '50d':
-                case '50n':
-                    data3.weather[0].icon = clouds;
-                    break;
-                case '09d':
-                case '09n':
-                    data3.weather[0].icon = showerRain;
-                    break;
-                case '10d':
-                    data3.weather[0].icon = rainDay;
-                    break;
-                case '10n':
-                    data3.weather[0].icon = rainNight;
-                    break;
-                case '11d':
-                case '11n':
-                    data3.weather[0].icon = thunderstorm;
-                    break;
-                case '13d':
-                case '13n':
-                    data3.weather[0].icon = snow;
-                    break;
-                default :
-                    data3.weather[0].icon = clouds;
-                    break;
-            }
+        // Assigns images to weater for each city
+        assignWeatherToImage(data1);
+        assignWeatherToImage(data2);
+        assignWeatherToImage(data3);
 
         this.setState({
             cities: [data1, data2, data3],
