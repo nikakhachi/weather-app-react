@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import assignWeatherToImage from '../../services/services';
 import './randominfo.css';
-
+import RandomCity from './subcomponents/randomcity';
 import capitals from './country-capitals';
 
 
@@ -54,24 +54,9 @@ class RandomInfo extends Component{
         <div>
             {!this.state.cities ? (<div></div>) : (
             <div id='container'>
-                <div className='container-item'>
-                    <h3 className='random-name'>{this.state.cities[0].name}</h3>
-                    <img className='random-weather' src={this.state.cities[0].weather[0].icon} alt="weather"/>
-                    <h4 className='random-dscr'>{this.state.cities[0].weather[0].description}</h4>
-                    <h4 className='random-temp'>{this.state.cities[0].main.temp}°C <span className='feels-like'>(feels like {this.state.cities[0].main['feels_like']}°C)</span></h4>
-                </div>
-                <div className='container-item'>
-                    <h3 className='random-name'>{this.state.cities[1].name}</h3>
-                    <img className='random-weather' src={this.state.cities[1].weather[0].icon} alt="weather"/>
-                    <h4 className='random-dscr'>{this.state.cities[1].weather[0].description}</h4>
-                    <h4 className='random-temp'>{this.state.cities[1].main.temp}°C <span className='feels-like'>(feels like {this.state.cities[1].main['feels_like']}°C)</span></h4>
-                </div>
-                <div className='container-item'>
-                    <h3 className='random-name'>{this.state.cities[2].name}</h3>
-                    <img className='random-weather' src={this.state.cities[2].weather[0].icon} alt="weather"/>
-                    <h4 className='random-dscr'>{this.state.cities[2].weather[0].description}</h4>
-                    <h4 className='random-temp'>{this.state.cities[2].main.temp}°C <span className='feels-like'>(feels like {this.state.cities[2].main['feels_like']}°C)</span></h4>
-                </div>
+                {this.state.cities.map(item => (
+                    <RandomCity city={item}/>
+                ))}
             </div>) }
         </div>
     )
