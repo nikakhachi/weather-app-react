@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Inter:wght@300&display=swap");
+
+#main-div {
+  margin-top: 2.1%;
+  animation: appear 0.3s;
+}
+#info-container {
+  text-align: left;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  margin-right: 10%;
+  margin-left: 10%;
+  background-color: #0d3546;
+  padding-bottom: 2%;
+  padding-top: 1%;
+}
+#item1 {
+  margin: 0 7%;
+}
+#location {
+  font-size: 3vw;
+}
+#temp {
+  font-size: 3vw;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  font-family: "Inter", sans-serif;
+}
+#description {
+  font-size: 2.7vw;
+  font-family: "Inter", sans-serif;
+}
+#feels-like {
+  margin-top: 10%;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5vw;
+}
+
+#item2 {
+  text-align: left;
+  margin-top: 1%;
+}
+#item {
+  width: 21%;
+  margin-top: 2%;
+}
+#weather-img {
+  width: 100%;
+  margin-top: -5%;
+  animation-name: appear;
+  animation-duration: 1s;
+}
+#item2 p {
+  font-size: 1.7vw;
+  line-height: 150%;
+  font-family: "Inter", sans-serif;
+}
+
+#not-found {
+  margin-top: 5%;
+  animation-name: appear;
+  animation-duration: 1s;
+}
+#not-city {
+  font-size: 5vw;
+  margin-bottom: 1%;
+}
+#not-spell {
+  font-size: 1.5vw;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media (max-width: 1050px) {
+  #location {
+    font-size: 9vw;
+    margin-bottom: 5%;
+  }
+  #info-container {
+    width: 90%;
+    margin: auto;
+    padding: 0 2%;
+    display: block;
+  }
+  #item {
+    width: 45%;
+    margin: 0;
+    float: left;
+    margin-right: 7%;
+    padding-top: 5%;
+    padding-left: 5%;
+  }
+  #temp {
+    font-size: 8vw;
+    margin: 0;
+  }
+  #description {
+    font-size: 5vw;
+    margin: 2% 0;
+  }
+  #feels-like {
+    font-size: 4.5vw;
+    margin: 0;
+  }
+  #item1 {
+    padding-top: 8%;
+    text-align: center;
+    padding-bottom: 6%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  #item2 p {
+    font-size: 5vw;
+  }
+  #item2 {
+    margin-left: 5%;
+    padding-bottom: 5%;
+  }
+  #not-found {
+    margin-top: 10%;
+  }
+  #not-city {
+    font-size: 11vw;
+  }
+  #not-spell {
+    font-size: 5vw;
+  }
+}

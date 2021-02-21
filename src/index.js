@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Header/main';
-import RandomInfo from './Random-Info/randominfo';
-import SearchInfo from './Search-Info/searchinfo';
+import Header from './components/Header/main';
+import RandomInfo from './components/Random-Info/randominfo';
+import SearchInfo from './components/Search-Info/searchinfo';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
