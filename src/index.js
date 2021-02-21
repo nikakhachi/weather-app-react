@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 import Header from './Header/main';
 import RandomInfo from './Random-Info/randominfo';
 import SearchInfo from './Search-Info/searchinfo';
