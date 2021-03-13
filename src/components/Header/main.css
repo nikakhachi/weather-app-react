@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
+
+#main-img {
+  width: 10%;
+  animation-name: appear;
+  animation-duration: 0.4s;
+}
+#title {
+  font-size: 5vw;
+  margin-left: 2%;
+  margin-top: 2%;
+  animation-name: appear;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  color: white;
+  text-decoration: none;
+}
+
+#searchbox {
+  margin-top: 2%;
+  width: 20%;
+  height: 2.3vw;
+  border: none;
+  outline: none;
+  padding: 0.2%;
+  font-size: 1.4vw;
+  padding-right: 1%;
+}
+#search-btn {
+  background-color: white;
+  border: none;
+  outline: none;
+  height: 2.7vw;
+  font-size: 1.4vw;
+  padding: 0 0.5%;
+  margin-left: -1%;
+  cursor: pointer;
+}
+
+form {
+  animation-name: appear;
+  animation-duration: 0.2s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media (max-width: 1050px) {
+  header {
+    margin-top: 5%;
+  }
+  #main-img {
+    width: 20%;
+  }
+  #title {
+    font-size: 12vw;
+  }
+  #searchbox {
+    width: 50%;
+    height: 5.5vw;
+    font-size: 3vw;
+    padding-left: 1%;
+    margin-top: 7%;
+  }
+  #search-btn {
+    margin-left: 1%;
+    height: 5.9vw;
+    font-size: 3vw;
+    padding: 0 4%;
+    background-color: rgb(243, 237, 237);
+    margin-bottom: 5%;
+  }
+}
